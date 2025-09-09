@@ -32,7 +32,7 @@ echo "Server Information:"
 echo "========================================"
 echo "Website URL: http://localhost:8000"
 echo "Admin Panel: http://localhost:8000/admin/view-submissions.php"
-echo "Admin Password: WebSolutions2024!"
+echo "Admin Password: WebSolutions2025!"
 echo "========================================"
 echo
 echo "Press Ctrl+C to stop the server"

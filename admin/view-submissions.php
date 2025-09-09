@@ -5,7 +5,7 @@
  */
 
 // Basic security - change password for production
-$password = 'WebSolutions2024!';
+$password = 'WebSolutions2025!';
 session_start();
 
 if (!isset($_SESSION['admin_logged_in'])) {

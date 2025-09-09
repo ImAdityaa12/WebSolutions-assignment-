@@ -43,7 +43,7 @@
 ### 3. Admin Dashboard
 
 - **URL**: `http://localhost:8000/admin/view-submissions.php`
-- **Password**: `WebSolutions2024!`
+- **Password**: `WebSolutions2025!`
 - **Features**: View submissions, reply to messages, real-time updates
 
 ### 4. Responsive Design
@@ -118,7 +118,7 @@
 
 **Admin panel access issues:**
 
-- Use password: `WebSolutions2024!`
+- Use password: `WebSolutions2025!`
 - Clear browser cache if needed
 - Check that submissions exist (submit test form first)
 

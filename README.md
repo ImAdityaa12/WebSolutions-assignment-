@@ -63,7 +63,7 @@ A modern, responsive business website with a fully functional contact form syste
 4. **Access Website**
    - **Homepage**: `http://localhost/websolutions/`
    - **Admin Panel**: `http://localhost/websolutions/admin/view-submissions.php`
-   - **Password**: `WebSolutions2024!`
+   - **Password**: `WebSolutions2025!`
 
 ### Option 2: Other Local Servers
 
@@ -139,7 +139,7 @@ After setup, verify everything works:
 - **PHP Errors**: Ensure PHP 7.4+ is installed and running
 - **Form Not Working**: Verify PHP mail configuration or check logs
 - **Styles Missing**: Ensure CSS files are accessible
-- **Admin Access**: Use password `WebSolutions2024!`
+- **Admin Access**: Use password `WebSolutions2025!`
 
 **Log Files:**
 
@@ -247,7 +247,7 @@ sass assets/scss/main.scss assets/css/styles.css --watch
 ### Admin Dashboard Access
 
 - **URL**: `/admin/view-submissions.php`
-- **Password**: `WebSolutions2024!`
+- **Password**: `WebSolutions2025!`
 - **Features**: View all form submissions, reply to inquiries, real-time monitoring
 
 ## 📧 Contact Form System

@@ -1,0 +1,633 @@
+// =============================================================================
+// Layout Styles
+// Grid System, Containers, and Layout Utilities
+// =============================================================================
+
+// Container
+// -----------------------------------------------------------------------------
+.container {
+  @include container;
+}
+
+.container-sm {
+  @include container($container-sm);
+}
+
+.container-md {
+  @include container($container-md);
+}
+
+.container-lg {
+  @include container($container-lg);
+}
+
+.container-xl {
+  @include container($container-xl);
+}
+
+.container-2xl {
+  @include container($container-2xl);
+}
+
+// Grid System
+// -----------------------------------------------------------------------------
+.grid {
+  display: grid;
+  gap: $grid-gutter;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-cols-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.grid-cols-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.grid-cols-12 {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+// Responsive grid classes
+@include tablet-up {
+  .md\:grid-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .md\:grid-cols-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .md\:grid-cols-12 {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+@include desktop-up {
+  .lg\:grid-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .lg\:grid-cols-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .lg\:grid-cols-12 {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+// Gap utilities
+.gap-0 {
+  gap: 0;
+}
+.gap-1 {
+  gap: $spacing-1;
+}
+.gap-2 {
+  gap: $spacing-2;
+}
+.gap-3 {
+  gap: $spacing-3;
+}
+.gap-4 {
+  gap: $spacing-4;
+}
+.gap-5 {
+  gap: $spacing-5;
+}
+.gap-6 {
+  gap: $spacing-6;
+}
+.gap-8 {
+  gap: $spacing-8;
+}
+.gap-10 {
+  gap: $spacing-10;
+}
+.gap-12 {
+  gap: $spacing-12;
+}
+
+// Flexbox Utilities
+// -----------------------------------------------------------------------------
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+// Flex direction
+.flex-row {
+  flex-direction: row;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+// Flex wrap
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+// Justify content
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+// Align items
+.items-start {
+  align-items: flex-start;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-center {
+  align-items: center;
+}
+.items-baseline {
+  align-items: baseline;
+}
+.items-stretch {
+  align-items: stretch;
+}
+
+// Align content
+.content-start {
+  align-content: flex-start;
+}
+.content-end {
+  align-content: flex-end;
+}
+.content-center {
+  align-content: center;
+}
+.content-between {
+  align-content: space-between;
+}
+.content-around {
+  align-content: space-around;
+}
+.content-evenly {
+  align-content: space-evenly;
+}
+
+// Align self
+.self-auto {
+  align-self: auto;
+}
+.self-start {
+  align-self: flex-start;
+}
+.self-end {
+  align-self: flex-end;
+}
+.self-center {
+  align-self: center;
+}
+.self-stretch {
+  align-self: stretch;
+}
+.self-baseline {
+  align-self: baseline;
+}
+
+// Flex grow and shrink
+.flex-1 {
+  flex: 1 1 0%;
+}
+.flex-auto {
+  flex: 1 1 auto;
+}
+.flex-initial {
+  flex: 0 1 auto;
+}
+.flex-none {
+  flex: none;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+// Position
+// -----------------------------------------------------------------------------
+.static {
+  position: static;
+}
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.sticky {
+  position: sticky;
+}
+
+// Top, right, bottom, left
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.inset-x-0 {
+  right: 0;
+  left: 0;
+}
+.inset-y-0 {
+  top: 0;
+  bottom: 0;
+}
+
+.top-0 {
+  top: 0;
+}
+.right-0 {
+  right: 0;
+}
+.bottom-0 {
+  bottom: 0;
+}
+.left-0 {
+  left: 0;
+}
+
+// Z-index
+.z-0 {
+  z-index: 0;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-20 {
+  z-index: 20;
+}
+.z-30 {
+  z-index: 30;
+}
+.z-40 {
+  z-index: 40;
+}
+.z-50 {
+  z-index: 50;
+}
+.z-auto {
+  z-index: auto;
+}
+
+// Width and Height
+// -----------------------------------------------------------------------------
+.w-auto {
+  width: auto;
+}
+.w-full {
+  width: 100%;
+}
+.w-screen {
+  width: 100vw;
+}
+.w-min {
+  width: min-content;
+}
+.w-max {
+  width: max-content;
+}
+.w-fit {
+  width: fit-content;
+}
+
+.h-auto {
+  height: auto;
+}
+.h-full {
+  height: 100%;
+}
+.h-screen {
+  height: 100vh;
+}
+.h-min {
+  height: min-content;
+}
+.h-max {
+  height: max-content;
+}
+.h-fit {
+  height: fit-content;
+}
+
+// Min/Max width and height
+.min-w-0 {
+  min-width: 0;
+}
+.min-w-full {
+  min-width: 100%;
+}
+.min-w-min {
+  min-width: min-content;
+}
+.min-w-max {
+  min-width: max-content;
+}
+.min-w-fit {
+  min-width: fit-content;
+}
+
+.min-h-0 {
+  min-height: 0;
+}
+.min-h-full {
+  min-height: 100%;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.max-w-none {
+  max-width: none;
+}
+.max-w-xs {
+  max-width: 20rem;
+}
+.max-w-sm {
+  max-width: 24rem;
+}
+.max-w-md {
+  max-width: 28rem;
+}
+.max-w-lg {
+  max-width: 32rem;
+}
+.max-w-xl {
+  max-width: 36rem;
+}
+.max-w-2xl {
+  max-width: 42rem;
+}
+.max-w-3xl {
+  max-width: 48rem;
+}
+.max-w-4xl {
+  max-width: 56rem;
+}
+.max-w-5xl {
+  max-width: 64rem;
+}
+.max-w-6xl {
+  max-width: 72rem;
+}
+.max-w-7xl {
+  max-width: 80rem;
+}
+.max-w-full {
+  max-width: 100%;
+}
+
+.max-h-full {
+  max-height: 100%;
+}
+.max-h-screen {
+  max-height: 100vh;
+}
+
+// Overflow
+// -----------------------------------------------------------------------------
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-visible {
+  overflow: visible;
+}
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+.overflow-x-visible {
+  overflow-x: visible;
+}
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+.overflow-y-visible {
+  overflow-y: visible;
+}
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+// Object fit and position
+.object-contain {
+  object-fit: contain;
+}
+.object-cover {
+  object-fit: cover;
+}
+.object-fill {
+  object-fit: fill;
+}
+.object-none {
+  object-fit: none;
+}
+.object-scale-down {
+  object-fit: scale-down;
+}
+
+// Layout Components
+// -----------------------------------------------------------------------------
+
+// Section spacing
+.section {
+  padding: $spacing-16 0;
+
+  @include tablet-up {
+    padding: $spacing-20 0;
+  }
+
+  @include desktop-up {
+    padding: $spacing-24 0;
+  }
+}
+
+.section-sm {
+  padding: $spacing-12 0;
+
+  @include tablet-up {
+    padding: $spacing-16 0;
+  }
+}
+
+.section-lg {
+  padding: $spacing-20 0;
+
+  @include tablet-up {
+    padding: $spacing-24 0;
+  }
+
+  @include desktop-up {
+    padding: $spacing-32 0;
+  }
+}
+
+// Page header
+.page-header {
+  padding: $spacing-16 0 $spacing-12 0;
+  text-align: center;
+  background: linear-gradient(135deg, $gray-50 0%, $white 100%);
+
+  @include tablet-up {
+    padding: $spacing-20 0 $spacing-16 0;
+  }
+
+  .page-title {
+    margin-bottom: $spacing-4;
+  }
+
+  .page-subtitle {
+    @include body-large;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// Section header
+.section-header {
+  text-align: center;
+  margin-bottom: $spacing-12;
+
+  @include tablet-up {
+    margin-bottom: $spacing-16;
+  }
+
+  .section-title {
+    margin-bottom: $spacing-4;
+  }
+
+  .section-subtitle {
+    @include body-large;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// Two column layout
+.two-column {
+  @include grid-responsive(1, 1, 2);
+  align-items: center;
+  gap: $spacing-8;
+
+  @include desktop-up {
+    gap: $spacing-12;
+  }
+}
+
+// Three column layout
+.three-column {
+  @include grid-responsive(1, 2, 3);
+}
+
+// Four column layout
+.four-column {
+  @include grid-responsive(1, 2, 4);
+}
+
+// Aspect ratio containers
+.aspect-square {
+  @include aspect-ratio(1, 1);
+}
+
+.aspect-video {
+  @include aspect-ratio(16, 9);
+}
+
+.aspect-photo {
+  @include aspect-ratio(4, 3);
+}

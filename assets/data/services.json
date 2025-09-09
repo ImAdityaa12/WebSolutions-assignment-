@@ -1,0 +1,158 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "Custom Web Development",
+      "description": "Tailored websites built from scratch using modern technologies and best practices to meet your specific business needs.",
+      "icon": "🚀",
+      "features": [
+        "Responsive design for all devices",
+        "Modern HTML5, CSS3, and JavaScript",
+        "SEO-optimized structure",
+        "Fast loading performance",
+        "Cross-browser compatibility",
+        "Clean, maintainable code"
+      ],
+      "technologies": ["HTML5", "CSS3", "JavaScript", "SCSS", "PHP"],
+      "timeline": "2-4 weeks",
+      "price_range": "$2,500 - $8,000"
+    },
+    {
+      "id": 2,
+      "title": "E-commerce Solutions",
+      "description": "Complete online store development with secure payment processing, inventory management, and user-friendly shopping experiences.",
+      "icon": "🛒",
+      "features": [
+        "Secure payment gateway integration",
+        "Product catalog management",
+        "Shopping cart functionality",
+        "Order tracking system",
+        "Customer account management",
+        "Mobile-optimized checkout"
+      ],
+      "technologies": ["PHP", "MySQL", "JavaScript", "Payment APIs", "SSL"],
+      "timeline": "4-8 weeks",
+      "price_range": "$5,000 - $15,000"
+    },
+    {
+      "id": 3,
+      "title": "Responsive Design",
+      "description": "Mobile-first design approach ensuring your website looks and functions perfectly on all devices and screen sizes.",
+      "icon": "📱",
+      "features": [
+        "Mobile-first design approach",
+        "Flexible grid systems",
+        "Touch-friendly interfaces",
+        "Optimized images and media",
+        "Fast mobile performance",
+        "Progressive web app features"
+      ],
+      "technologies": [
+        "CSS Grid",
+        "Flexbox",
+        "Media Queries",
+        "Progressive Enhancement"
+      ],
+      "timeline": "1-3 weeks",
+      "price_range": "$1,500 - $4,000"
+    },
+    {
+      "id": 4,
+      "title": "Content Management Systems",
+      "description": "Easy-to-use content management solutions that allow you to update and maintain your website without technical knowledge.",
+      "icon": "⚙️",
+      "features": [
+        "User-friendly admin interface",
+        "Content editing capabilities",
+        "Media library management",
+        "User role management",
+        "SEO tools integration",
+        "Backup and security features"
+      ],
+      "technologies": ["PHP", "MySQL", "Custom CMS", "WYSIWYG Editors"],
+      "timeline": "3-6 weeks",
+      "price_range": "$3,000 - $10,000"
+    },
+    {
+      "id": 5,
+      "title": "API Development & Integration",
+      "description": "Custom API development and third-party service integrations to extend your website's functionality and connect with external systems.",
+      "icon": "🔗",
+      "features": [
+        "RESTful API development",
+        "Third-party service integration",
+        "Data synchronization",
+        "Authentication systems",
+        "Rate limiting and security",
+        "Comprehensive documentation"
+      ],
+      "technologies": ["PHP", "JSON", "REST APIs", "OAuth", "cURL"],
+      "timeline": "2-5 weeks",
+      "price_range": "$2,000 - $7,500"
+    },
+    {
+      "id": 6,
+      "title": "Website Maintenance & Support",
+      "description": "Ongoing website maintenance, security updates, performance optimization, and technical support to keep your site running smoothly.",
+      "icon": "🛠️",
+      "features": [
+        "Regular security updates",
+        "Performance monitoring",
+        "Backup management",
+        "Bug fixes and improvements",
+        "Content updates",
+        "24/7 technical support"
+      ],
+      "technologies": [
+        "Monitoring Tools",
+        "Security Patches",
+        "Performance Optimization"
+      ],
+      "timeline": "Ongoing",
+      "price_range": "$200 - $800/month"
+    }
+  ],
+  "service_categories": [
+    {
+      "name": "Development",
+      "services": [1, 2, 5]
+    },
+    {
+      "name": "Design",
+      "services": [3]
+    },
+    {
+      "name": "Management",
+      "services": [4, 6]
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "client_name": "Sarah Johnson",
+      "company": "TechStart Inc.",
+      "service_id": 1,
+      "rating": 5,
+      "comment": "WebSolutions delivered exactly what we needed. The custom website exceeded our expectations and has significantly improved our online presence.",
+      "date": "2024-02-15"
+    },
+    {
+      "id": 2,
+      "client_name": "Michael Chen",
+      "company": "RetailPro",
+      "service_id": 2,
+      "rating": 5,
+      "comment": "Our e-commerce platform is fantastic! Sales have increased by 40% since launch. The team was professional and delivered on time.",
+      "date": "2024-01-28"
+    },
+    {
+      "id": 3,
+      "client_name": "Emily Rodriguez",
+      "company": "Creative Agency",
+      "service_id": 3,
+      "rating": 5,
+      "comment": "The responsive design work was outstanding. Our website now looks perfect on every device, and our mobile traffic has doubled.",
+      "date": "2024-03-10"
+    }
+  ]
+}

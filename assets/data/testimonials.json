@@ -1,0 +1,141 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "client_name": "Sarah Johnson",
+      "client_position": "CEO",
+      "company": "TechStart Inc.",
+      "company_logo": "assets/images/clients/techstart-logo.png",
+      "rating": 5,
+      "comment": "WebSolutions delivered exactly what we needed. The custom website exceeded our expectations and has significantly improved our online presence. Their attention to detail and professional approach made the entire process smooth and enjoyable.",
+      "project_type": "Custom Web Development",
+      "date": "2024-02-15",
+      "project_duration": "6 weeks",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "client_name": "Michael Chen",
+      "client_position": "Founder",
+      "company": "RetailPro",
+      "company_logo": "assets/images/clients/retailpro-logo.png",
+      "rating": 5,
+      "comment": "Our e-commerce platform is fantastic! Sales have increased by 40% since launch. The team was professional, delivered on time, and provided excellent ongoing support. I couldn't be happier with the results.",
+      "project_type": "E-commerce Development",
+      "date": "2024-01-28",
+      "project_duration": "8 weeks",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "client_name": "Emily Rodriguez",
+      "client_position": "Creative Director",
+      "company": "Creative Agency",
+      "company_logo": "assets/images/clients/creative-agency-logo.png",
+      "rating": 5,
+      "comment": "The responsive design work was outstanding. Our website now looks perfect on every device, and our mobile traffic has doubled. The team's expertise in modern web technologies really shows in the final product.",
+      "project_type": "Responsive Design",
+      "date": "2024-03-10",
+      "project_duration": "3 weeks",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "client_name": "Robert Taylor",
+      "client_position": "Operations Manager",
+      "company": "LogisticsPro",
+      "company_logo": "assets/images/clients/logisticspro-logo.png",
+      "rating": 5,
+      "comment": "The custom CMS they built for us has streamlined our content management process significantly. Our team can now update the website easily without any technical knowledge. Excellent work!",
+      "project_type": "Content Management System",
+      "date": "2024-01-12",
+      "project_duration": "5 weeks",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "client_name": "Jennifer Adams",
+      "client_position": "Marketing Director",
+      "company": "HealthTech Solutions",
+      "company_logo": "assets/images/clients/healthtech-logo.png",
+      "rating": 5,
+      "comment": "WebSolutions integrated multiple APIs seamlessly into our platform. The data synchronization works flawlessly, and their documentation is comprehensive. They truly understand complex technical requirements.",
+      "project_type": "API Development & Integration",
+      "date": "2023-12-20",
+      "project_duration": "4 weeks",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "client_name": "Thomas Brown",
+      "client_position": "Small Business Owner",
+      "company": "Local Restaurant Chain",
+      "company_logo": "assets/images/clients/restaurant-logo.png",
+      "rating": 5,
+      "comment": "Their ongoing maintenance service has been invaluable. Our website runs smoothly, loads fast, and we never have to worry about security issues. The monthly reports keep us informed about our site's performance.",
+      "project_type": "Website Maintenance",
+      "date": "2023-11-15",
+      "project_duration": "Ongoing",
+      "featured": false
+    },
+    {
+      "id": 7,
+      "client_name": "Amanda Foster",
+      "client_position": "E-commerce Manager",
+      "company": "Fashion Boutique",
+      "company_logo": "assets/images/clients/fashion-boutique-logo.png",
+      "rating": 5,
+      "comment": "The team redesigned our online store with a focus on user experience. Our conversion rate has improved by 35%, and customers frequently compliment the new design. Outstanding results!",
+      "project_type": "E-commerce Redesign",
+      "date": "2023-10-30",
+      "project_duration": "7 weeks",
+      "featured": false
+    },
+    {
+      "id": 8,
+      "client_name": "Daniel Martinez",
+      "client_position": "Startup Founder",
+      "company": "InnovateNow",
+      "company_logo": "assets/images/clients/innovatenow-logo.png",
+      "rating": 5,
+      "comment": "As a startup, we needed a professional web presence quickly and affordably. WebSolutions delivered a beautiful, functional website that has helped us attract investors and customers. Highly recommended!",
+      "project_type": "Startup Website",
+      "date": "2023-09-18",
+      "project_duration": "4 weeks",
+      "featured": false
+    }
+  ],
+  "testimonial_stats": {
+    "total_testimonials": 8,
+    "average_rating": 5.0,
+    "featured_count": 3,
+    "satisfaction_rate": 100
+  },
+  "client_industries": [
+    {
+      "industry": "Technology",
+      "count": 3,
+      "percentage": 37.5
+    },
+    {
+      "industry": "E-commerce",
+      "count": 2,
+      "percentage": 25.0
+    },
+    {
+      "industry": "Healthcare",
+      "count": 1,
+      "percentage": 12.5
+    },
+    {
+      "industry": "Food & Beverage",
+      "count": 1,
+      "percentage": 12.5
+    },
+    {
+      "industry": "Fashion",
+      "count": 1,
+      "percentage": 12.5
+    }
+  ]
+}

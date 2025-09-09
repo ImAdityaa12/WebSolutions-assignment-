@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About Professional Web Solutions - Learn about our team and expertise in web development"
+    />
+    <meta
+      name="keywords"
+      content="about us, web development team, professional experience"
+    />
+    <meta name="author" content="Professional Web Solutions" />
+    <title>About - Professional Web Solutions</title>
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="index.html" class="brand-link">
+            <span class="brand-text">WebSolutions</span>
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Navigation menu -->
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link active" aria-current="page"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <h1 class="page-title">About Us</h1>
+          <p class="page-subtitle">
+            Meet the team behind exceptional web solutions
+          </p>
+        </div>
+      </section>
+
+      <!-- About Content -->
+      <section class="about-content">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-text">
+              <h2>Our Story</h2>
+              <p>
+                Founded with a passion for creating exceptional digital
+                experiences, WebSolutions has been at the forefront of web
+                development innovation. We combine technical expertise with
+                creative vision to deliver websites that not only look stunning
+                but also perform flawlessly.
+              </p>
+
+              <p>
+                Our team of dedicated professionals brings years of experience
+                in modern web technologies, ensuring that every project we
+                undertake meets the highest standards of quality and
+                performance.
+              </p>
+
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <span class="stat-number">50+</span>
+                  <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">5+</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">100%</span>
+                  <span class="stat-label">Client Satisfaction</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-image">
+              <div class="image-placeholder">
+                <!-- About image will be added here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section class="team" id="team">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Our Team</h2>
+            <p class="section-subtitle">
+              Meet the experts who bring your vision to life
+            </p>
+          </div>
+
+          <!-- Team members will be loaded dynamically from JSON -->
+          <div class="team-grid" id="team-container">
+            <!-- Team members will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section class="values">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Our Values</h2>
+            <p class="section-subtitle">
+              The principles that guide everything we do
+            </p>
+          </div>
+
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon">
+                <span class="icon">💡</span>
+              </div>
+              <h3 class="value-title">Innovation</h3>
+              <p class="value-description">
+                We stay ahead of the curve with the latest technologies and best
+                practices
+              </p>
+            </div>
+
+            <div class="value-card">
+              <div class="value-icon">
+                <span class="icon">🤝</span>
+              </div>
+              <h3 class="value-title">Collaboration</h3>
+              <p class="value-description">
+                We work closely with our clients to understand and exceed their
+                expectations
+              </p>
+            </div>
+
+            <div class="value-card">
+              <div class="value-icon">
+                <span class="icon">⚡</span>
+              </div>
+              <h3 class="value-title">Excellence</h3>
+              <p class="value-description">
+                We deliver high-quality solutions that stand the test of time
+              </p>
+            </div>
+
+            <div class="value-card">
+              <div class="value-icon">
+                <span class="icon">🎯</span>
+              </div>
+              <h3 class="value-title">Results</h3>
+              <p class="value-description">
+                We focus on delivering measurable results that drive business
+                growth
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2 class="cta-title">Ready to Work Together?</h2>
+            <p class="cta-subtitle">
+              Let's discuss how we can help bring your project to life
+            </p>
+            <a href="contact.html" class="btn btn-primary btn-large"
+              >Get In Touch</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">WebSolutions</h3>
+            <p class="footer-text">
+              Professional web development services for modern businesses.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-heading">Contact Info</h4>
+            <div class="contact-info">
+              <p>Email: info@websolutions.com</p>
+              <p>Phone: (555) 123-4567</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 WebSolutions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/content-loader.js"></script>
+  </body>
+</html>

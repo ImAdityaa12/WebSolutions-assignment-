@@ -1,0 +1,766 @@
+// =============================================================================
+// Component Styles
+// Navigation, Buttons, Forms, Cards, and Other UI Components
+// =============================================================================
+
+// Navigation
+// -----------------------------------------------------------------------------
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $navbar-height;
+  background-color: $navbar-bg;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid $navbar-border;
+  z-index: $z-index-fixed;
+  transition: all $transition-base;
+}
+
+.nav-container {
+  @include container;
+  @include flex-between;
+  height: 100%;
+}
+
+.nav-brand {
+  .brand-link {
+    @include flex-center;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.nav-toggle {
+  @include flex-center;
+  flex-direction: column;
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: $z-index-modal;
+
+  @include tablet-up {
+    display: none;
+  }
+
+  .hamburger-line {
+    width: 1.5rem;
+    height: 2px;
+    background-color: $gray-700;
+    transition: all $transition-base;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    .hamburger-line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+}
+
+.nav-menu {
+  @include mobile-only {
+    position: fixed;
+    top: $navbar-height;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    border-bottom: 1px solid $navbar-border;
+    box-shadow: $shadow-lg;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all $transition-base;
+
+    &.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.nav-list {
+  display: flex;
+
+  @include mobile-only {
+    flex-direction: column;
+    padding: $spacing-4 0;
+  }
+}
+
+.nav-item {
+  @include mobile-only {
+    border-bottom: 1px solid $gray-100;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.nav-link {
+  display: block;
+  padding: $spacing-3 $spacing-4;
+  font-weight: $font-weight-medium;
+  color: $gray-700;
+  text-decoration: none;
+  transition: color $transition-base;
+
+  @include tablet-up {
+    padding: $spacing-2 $spacing-4;
+  }
+
+  &:hover,
+  &.active {
+    color: $primary-color;
+  }
+
+  &.active {
+    font-weight: $font-weight-semibold;
+  }
+}
+
+// Add top margin to body to account for fixed navbar
+body {
+  margin-top: $navbar-height;
+}
+
+// Buttons
+// -----------------------------------------------------------------------------
+.btn {
+  @include btn-base;
+
+  &.btn-primary {
+    @include btn-primary;
+  }
+
+  &.btn-secondary {
+    @include btn-secondary;
+  }
+
+  &.btn-large {
+    padding: $spacing-4 $spacing-8;
+    font-size: $font-size-lg;
+  }
+
+  &.btn-small {
+    padding: $spacing-2 $spacing-4;
+    font-size: $font-size-sm;
+  }
+
+  // Loading state
+  .btn-loading {
+    @include loading-spinner(16px, currentColor);
+    margin-right: $spacing-2;
+  }
+}
+
+// Forms
+// -----------------------------------------------------------------------------
+.form-group {
+  margin-bottom: $spacing-5;
+}
+
+.form-label {
+  @include form-label;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  @include form-input;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right $spacing-3 center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  padding-right: $spacing-10;
+}
+
+.form-checkbox {
+  width: 1rem;
+  height: 1rem;
+  margin-right: $spacing-2;
+  accent-color: $primary-color;
+}
+
+.checkbox-label {
+  @include flex-center;
+  align-items: flex-start;
+  cursor: pointer;
+
+  .checkbox-text {
+    font-size: $font-size-sm;
+    color: $gray-600;
+    line-height: $line-height-normal;
+  }
+}
+
+.form-row {
+  display: grid;
+  gap: $spacing-4;
+
+  @include tablet-up {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-error {
+  margin-top: $spacing-1;
+  font-size: $font-size-sm;
+  color: $error-color;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.form-messages {
+  margin-bottom: $spacing-5;
+  padding: $spacing-4;
+  border-radius: $border-radius-md;
+  display: none;
+
+  &.success {
+    background-color: rgba($success-color, 0.1);
+    border: 1px solid rgba($success-color, 0.2);
+    color: darken($success-color, 20%);
+    display: block;
+  }
+
+  &.error {
+    background-color: rgba($error-color, 0.1);
+    border: 1px solid rgba($error-color, 0.2);
+    color: darken($error-color, 20%);
+    display: block;
+  }
+}
+
+.form-actions {
+  margin-top: $spacing-6;
+}
+
+.form-note {
+  margin-top: $spacing-4;
+  font-size: $font-size-sm;
+  color: $gray-500;
+  text-align: center;
+}
+
+// Input validation states
+.form-input,
+.form-select,
+.form-textarea {
+  &.error {
+    border-color: $error-color;
+    box-shadow: 0 0 0 3px rgba($error-color, 0.1);
+  }
+
+  &.success {
+    border-color: $success-color;
+    box-shadow: 0 0 0 3px rgba($success-color, 0.1);
+  }
+}
+
+// Cards
+// -----------------------------------------------------------------------------
+.card {
+  @include card;
+}
+
+.feature-card,
+.service-card,
+.team-card,
+.value-card {
+  @include card;
+  text-align: center;
+
+  .feature-icon,
+  .service-icon,
+  .team-image,
+  .value-icon {
+    @include flex-center;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto $spacing-4 auto;
+    background-color: rgba($primary-color, 0.1);
+    border-radius: $border-radius-full;
+
+    .icon {
+      font-size: $font-size-2xl;
+    }
+  }
+
+  .feature-title,
+  .service-title,
+  .team-name,
+  .value-title {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-3;
+    color: $gray-900;
+  }
+
+  .feature-description,
+  .service-description,
+  .team-position,
+  .value-description {
+    color: $gray-600;
+    line-height: $line-height-relaxed;
+  }
+}
+
+.team-card {
+  .team-image {
+    width: 5rem;
+    height: 5rem;
+    border-radius: $border-radius-full;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .team-bio {
+    margin-top: $spacing-3;
+    font-size: $font-size-sm;
+    color: $gray-500;
+  }
+
+  .team-social {
+    margin-top: $spacing-4;
+
+    .social-links {
+      @include flex-center;
+      gap: $spacing-3;
+
+      a {
+        @include flex-center;
+        width: 2rem;
+        height: 2rem;
+        background-color: $gray-100;
+        border-radius: $border-radius-full;
+        color: $gray-600;
+        transition: all $transition-base;
+
+        &:hover {
+          background-color: $primary-color;
+          color: $white;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}
+
+// Hero Section
+// -----------------------------------------------------------------------------
+.hero {
+  padding: $spacing-20 0;
+  background: linear-gradient(135deg, $gray-50 0%, $white 100%);
+
+  @include tablet-up {
+    padding: $spacing-24 0;
+  }
+}
+
+.hero-container {
+  @include container;
+  @include grid-responsive(1, 1, 2);
+  align-items: center;
+  gap: $spacing-12;
+}
+
+.hero-content {
+  text-align: center;
+
+  @include desktop-up {
+    text-align: left;
+  }
+}
+
+.hero-title {
+  margin-bottom: $spacing-6;
+}
+
+.hero-subtitle {
+  @include body-large;
+  margin-bottom: $spacing-8;
+}
+
+.hero-actions {
+  @include flex-center;
+  gap: $spacing-4;
+
+  @include desktop-up {
+    justify-content: flex-start;
+  }
+}
+
+.hero-image {
+  @include flex-center;
+
+  .hero-placeholder {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    background: linear-gradient(45deg, $primary-color, $secondary-color);
+    border-radius: $border-radius-xl;
+    @include flex-center;
+    color: $white;
+    font-size: $font-size-lg;
+
+    @include tablet-up {
+      height: 400px;
+    }
+  }
+}
+
+// Features Grid
+// -----------------------------------------------------------------------------
+.features-grid,
+.services-grid,
+.team-grid,
+.values-grid {
+  @include grid-responsive(1, 2, 3);
+}
+
+.values-grid {
+  @include grid-responsive(1, 2, 4);
+}
+
+// Process Steps
+// -----------------------------------------------------------------------------
+.process-steps {
+  @include grid-responsive(1, 2, 4);
+}
+
+.process-step {
+  text-align: center;
+
+  .step-number {
+    @include flex-center;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto $spacing-4 auto;
+    background-color: $primary-color;
+    color: $white;
+    border-radius: $border-radius-full;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+  }
+
+  .step-title {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-3;
+    color: $gray-900;
+  }
+
+  .step-description {
+    color: $gray-600;
+    line-height: $line-height-relaxed;
+  }
+}
+
+// Technology Grid
+// -----------------------------------------------------------------------------
+.tech-grid {
+  @include grid-responsive(1, 2, 4);
+}
+
+.tech-category {
+  text-align: center;
+
+  .tech-title {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-4;
+    color: $gray-900;
+  }
+
+  .tech-list {
+    li {
+      padding: $spacing-2 0;
+      color: $gray-600;
+      border-bottom: 1px solid $gray-100;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+// Stats Grid
+// -----------------------------------------------------------------------------
+.stats-grid {
+  @include grid-responsive(1, 3, 3);
+  margin-top: $spacing-8;
+}
+
+.stat-item {
+  text-align: center;
+
+  .stat-number {
+    display: block;
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+    margin-bottom: $spacing-2;
+  }
+
+  .stat-label {
+    font-size: $font-size-sm;
+    color: $gray-600;
+  }
+}
+
+// CTA Section
+// -----------------------------------------------------------------------------
+.cta {
+  padding: $spacing-20 0;
+  background: linear-gradient(
+    135deg,
+    $primary-color 0%,
+    darken($primary-color, 10%) 100%
+  );
+  color: $white;
+  text-align: center;
+
+  .cta-title {
+    color: $white;
+    margin-bottom: $spacing-4;
+  }
+
+  .cta-subtitle {
+    @include body-large;
+    color: rgba($white, 0.9);
+    margin-bottom: $spacing-8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn {
+    background-color: $white;
+    color: $primary-color;
+    border-color: $white;
+
+    &:hover {
+      background-color: $gray-100;
+      border-color: $gray-100;
+    }
+  }
+}
+
+// Footer
+// -----------------------------------------------------------------------------
+.footer {
+  background-color: $gray-900;
+  color: $gray-300;
+  padding: $spacing-16 0 $spacing-8 0;
+
+  .footer-content {
+    @include grid-responsive(1, 2, 3);
+    margin-bottom: $spacing-8;
+  }
+
+  .footer-title {
+    color: $white;
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-4;
+  }
+
+  .footer-heading {
+    color: $white;
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-4;
+  }
+
+  .footer-text {
+    color: $gray-400;
+    line-height: $line-height-relaxed;
+  }
+
+  .footer-links {
+    li {
+      margin-bottom: $spacing-2;
+
+      a {
+        color: $gray-400;
+        transition: color $transition-base;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .contact-info {
+    p {
+      margin-bottom: $spacing-2;
+      color: $gray-400;
+    }
+  }
+
+  .footer-bottom {
+    padding-top: $spacing-8;
+    border-top: 1px solid $gray-700;
+    text-align: center;
+    color: $gray-500;
+    font-size: $font-size-sm;
+  }
+}
+
+// FAQ Section
+// -----------------------------------------------------------------------------
+.faq-grid {
+  @include grid-responsive(1, 1, 2);
+}
+
+.faq-item {
+  .faq-question {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    color: $gray-900;
+    margin-bottom: $spacing-3;
+  }
+
+  .faq-answer {
+    color: $gray-600;
+    line-height: $line-height-relaxed;
+  }
+}
+
+// Contact Section
+// -----------------------------------------------------------------------------
+.contact-section {
+  padding: $spacing-16 0;
+}
+
+.contact-grid {
+  @include grid-responsive(1, 1, 2);
+  gap: $spacing-12;
+}
+
+.contact-info {
+  h2 {
+    margin-bottom: $spacing-6;
+  }
+
+  p {
+    @include body-large;
+    margin-bottom: $spacing-8;
+  }
+}
+
+.contact-details {
+  .contact-item {
+    @include flex-center;
+    align-items: flex-start;
+    justify-content: start;
+    margin-bottom: $spacing-6;
+
+    .contact-icon {
+      @include flex-center;
+      width: 3rem;
+      height: 3rem;
+      background-color: rgba($primary-color, 0.1);
+      border-radius: $border-radius-full;
+      margin-right: $spacing-4;
+      flex-shrink: 0;
+
+      .icon {
+        font-size: $font-size-lg;
+      }
+    }
+
+    .contact-text {
+      h3 {
+        font-size: $font-size-base;
+        font-weight: $font-weight-semibold;
+        color: $gray-900;
+        margin-bottom: $spacing-1;
+      }
+
+      p {
+        color: $gray-600;
+        margin: 0;
+        line-height: $line-height-normal;
+      }
+    }
+  }
+}
+
+.contact-form-container {
+  .form-header {
+    margin-bottom: $spacing-6;
+
+    h2 {
+      margin-bottom: $spacing-3;
+    }
+
+    p {
+      color: $gray-600;
+      margin: 0;
+    }
+  }
+}
+
+// Loading States
+// -----------------------------------------------------------------------------
+.loading {
+  @include flex-center;
+  padding: $spacing-8;
+
+  .spinner {
+    @include loading-spinner(32px, $primary-color);
+  }
+}
+
+// Animations
+// -----------------------------------------------------------------------------
+.fade-in {
+  @include fade-in;
+}
+
+.slide-up {
+  @include slide-up;
+}

@@ -1,0 +1,149 @@
+{
+  "team": [
+    {
+      "id": 1,
+      "name": "Alex Thompson",
+      "position": "Lead Developer & Founder",
+      "bio": "With over 8 years of experience in web development, Alex specializes in full-stack development and leads our technical team. Passionate about creating scalable, maintainable solutions.",
+      "image": "assets/images/team/alex-thompson.jpg",
+      "skills": [
+        "Full-Stack Development",
+        "JavaScript/TypeScript",
+        "PHP & Laravel",
+        "Database Design",
+        "Team Leadership"
+      ],
+      "experience_years": 8,
+      "social": {
+        "linkedin": "https://linkedin.com/in/alexthompson",
+        "github": "https://github.com/alexthompson",
+        "twitter": "https://twitter.com/alexthompson"
+      },
+      "email": "alex@websolutions.com"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Martinez",
+      "position": "UI/UX Designer",
+      "bio": "Sarah brings creativity and user-centered design thinking to every project. She has a keen eye for detail and specializes in creating intuitive, beautiful user experiences.",
+      "image": "assets/images/team/sarah-martinez.jpg",
+      "skills": [
+        "UI/UX Design",
+        "Figma & Adobe Creative Suite",
+        "User Research",
+        "Prototyping",
+        "Responsive Design"
+      ],
+      "experience_years": 6,
+      "social": {
+        "linkedin": "https://linkedin.com/in/sarahmartinez",
+        "dribbble": "https://dribbble.com/sarahmartinez",
+        "behance": "https://behance.net/sarahmartinez"
+      },
+      "email": "sarah@websolutions.com"
+    },
+    {
+      "id": 3,
+      "name": "David Kim",
+      "position": "Frontend Developer",
+      "bio": "David is passionate about modern frontend technologies and creating performant, accessible web applications. He stays up-to-date with the latest trends and best practices.",
+      "image": "assets/images/team/david-kim.jpg",
+      "skills": [
+        "React & Vue.js",
+        "Modern JavaScript",
+        "CSS/SCSS",
+        "Performance Optimization",
+        "Accessibility"
+      ],
+      "experience_years": 5,
+      "social": {
+        "linkedin": "https://linkedin.com/in/davidkim",
+        "github": "https://github.com/davidkim",
+        "codepen": "https://codepen.io/davidkim"
+      },
+      "email": "david@websolutions.com"
+    },
+    {
+      "id": 4,
+      "name": "Lisa Chen",
+      "position": "Backend Developer",
+      "bio": "Lisa specializes in server-side development and database architecture. She ensures our applications are secure, scalable, and perform optimally under any load.",
+      "image": "assets/images/team/lisa-chen.jpg",
+      "skills": [
+        "PHP & Node.js",
+        "Database Design",
+        "API Development",
+        "Server Administration",
+        "Security Best Practices"
+      ],
+      "experience_years": 7,
+      "social": {
+        "linkedin": "https://linkedin.com/in/lisachen",
+        "github": "https://github.com/lisachen",
+        "stackoverflow": "https://stackoverflow.com/users/lisachen"
+      },
+      "email": "lisa@websolutions.com"
+    },
+    {
+      "id": 5,
+      "name": "Marcus Johnson",
+      "position": "Project Manager",
+      "bio": "Marcus ensures projects are delivered on time and within budget. With his background in both technology and business, he bridges the gap between client needs and technical solutions.",
+      "image": "assets/images/team/marcus-johnson.jpg",
+      "skills": [
+        "Project Management",
+        "Agile Methodologies",
+        "Client Communication",
+        "Quality Assurance",
+        "Business Analysis"
+      ],
+      "experience_years": 9,
+      "social": {
+        "linkedin": "https://linkedin.com/in/marcusjohnson",
+        "twitter": "https://twitter.com/marcusjohnson"
+      },
+      "email": "marcus@websolutions.com"
+    },
+    {
+      "id": 6,
+      "name": "Emma Wilson",
+      "position": "Digital Marketing Specialist",
+      "bio": "Emma helps our clients maximize their online presence through SEO, content strategy, and digital marketing. She ensures websites not only look great but also perform well in search results.",
+      "image": "assets/images/team/emma-wilson.jpg",
+      "skills": [
+        "SEO Optimization",
+        "Content Strategy",
+        "Google Analytics",
+        "Social Media Marketing",
+        "Conversion Optimization"
+      ],
+      "experience_years": 4,
+      "social": {
+        "linkedin": "https://linkedin.com/in/emmawilson",
+        "twitter": "https://twitter.com/emmawilson"
+      },
+      "email": "emma@websolutions.com"
+    }
+  ],
+  "company_stats": {
+    "founded_year": 2019,
+    "team_size": 6,
+    "projects_completed": 150,
+    "client_satisfaction": 98,
+    "countries_served": 12
+  },
+  "office_locations": [
+    {
+      "city": "San Francisco",
+      "address": "123 Business Ave, Suite 100, San Francisco, CA 94105",
+      "phone": "(555) 123-4567",
+      "is_headquarters": true
+    },
+    {
+      "city": "Remote",
+      "address": "Distributed team across North America",
+      "phone": "(555) 123-4567",
+      "is_headquarters": false
+    }
+  ]
+}

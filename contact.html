@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Professional Web Solutions - Get in touch for your web development project"
+    />
+    <meta
+      name="keywords"
+      content="contact, web development quote, professional consultation"
+    />
+    <meta name="author" content="Professional Web Solutions" />
+    <title>Contact - Professional Web Solutions</title>
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="index.html" class="brand-link">
+            <span class="brand-text">WebSolutions</span>
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Navigation menu -->
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link active" aria-current="page"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <h1 class="page-title">Contact Us</h1>
+          <p class="page-subtitle">
+            Ready to start your project? Let's discuss your needs
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section">
+        <div class="container">
+          <div class="contact-grid">
+            <!-- Contact Information -->
+            <div class="contact-info">
+              <h2>Get In Touch</h2>
+              <p>
+                We'd love to hear about your project and discuss how we can help
+                bring your vision to life. Reach out to us using the form or
+                contact information below.
+              </p>
+
+              <div class="contact-details">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <span class="icon">📧</span>
+                  </div>
+                  <div class="contact-text">
+                    <h3>Email</h3>
+                    <p>info@websolutions.com</p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <span class="icon">📞</span>
+                  </div>
+                  <div class="contact-text">
+                    <h3>Phone</h3>
+                    <p>(555) 123-4567</p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <span class="icon">📍</span>
+                  </div>
+                  <div class="contact-text">
+                    <h3>Office</h3>
+                    <p>
+                      123 Business Ave<br />Suite 100<br />City, State 12345
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <span class="icon">🕒</span>
+                  </div>
+                  <div class="contact-text">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday<br />9:00 AM - 6:00 PM EST</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+              <form
+                class="contact-form"
+                id="contactForm"
+                action="php/contact-handler.php"
+                method="POST"
+                novalidate
+              >
+                <div class="form-header">
+                  <h2>Send Us A Message</h2>
+                  <p>
+                    Fill out the form below and we'll get back to you within 24
+                    hours.
+                  </p>
+                </div>
+
+                <!-- Form Messages -->
+                <div
+                  class="form-messages"
+                  id="formMessages"
+                  role="alert"
+                  aria-live="polite"
+                >
+                  <!-- Success/Error messages will be displayed here -->
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName" class="form-label"
+                      >First Name *</label
+                    >
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      class="form-input"
+                      required
+                      aria-describedby="firstName-error"
+                      autocomplete="given-name"
+                    />
+                    <div
+                      class="form-error"
+                      id="firstName-error"
+                      role="alert"
+                    ></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="lastName" class="form-label">Last Name *</label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      class="form-input"
+                      required
+                      aria-describedby="lastName-error"
+                      autocomplete="family-name"
+                    />
+                    <div
+                      class="form-error"
+                      id="lastName-error"
+                      role="alert"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="email" class="form-label"
+                      >Email Address *</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-input"
+                      required
+                      aria-describedby="email-error"
+                      autocomplete="email"
+                    />
+                    <div class="form-error" id="email-error" role="alert"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      class="form-input"
+                      aria-describedby="phone-error"
+                      autocomplete="tel"
+                    />
+                    <div class="form-error" id="phone-error" role="alert"></div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject" class="form-label">Subject *</label>
+                  <select
+                    id="subject"
+                    name="subject"
+                    class="form-select"
+                    required
+                    aria-describedby="subject-error"
+                  >
+                    <option value="">Please select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="quote">Request Quote</option>
+                    <option value="support">Technical Support</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div class="form-error" id="subject-error" role="alert"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-textarea"
+                    rows="6"
+                    required
+                    aria-describedby="message-error"
+                    placeholder="Tell us about your project or inquiry..."
+                  ></textarea>
+                  <div class="form-error" id="message-error" role="alert"></div>
+                </div>
+
+                <div class="form-group">
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      id="newsletter"
+                      name="newsletter"
+                      class="form-checkbox"
+                    />
+                    <span class="checkbox-text"
+                      >I would like to receive updates about your services and
+                      industry insights</span
+                    >
+                  </label>
+                </div>
+
+                <div class="form-actions">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-large"
+                    id="submitBtn"
+                  >
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-loading" style="display: none"
+                      >Sending...</span
+                    >
+                  </button>
+                </div>
+
+                <p class="form-note">
+                  * Required fields. We respect your privacy and will never
+                  share your information.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Quick answers to common questions</p>
+          </div>
+
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h3 class="faq-question">
+                How long does a typical project take?
+              </h3>
+              <p class="faq-answer">
+                Project timelines vary based on complexity, but most websites
+                take 2-6 weeks from start to finish. We'll provide a detailed
+                timeline during our initial consultation.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3 class="faq-question">Do you provide ongoing maintenance?</h3>
+              <p class="faq-answer">
+                Yes, we offer comprehensive maintenance packages to keep your
+                website secure, updated, and performing optimally.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3 class="faq-question">Can you work with my existing brand?</h3>
+              <p class="faq-answer">
+                Absolutely! We can work with your existing brand guidelines or
+                help develop new branding that aligns with your vision.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3 class="faq-question">
+                What's included in your web development service?
+              </h3>
+              <p class="faq-answer">
+                Our service includes design, development, testing, deployment,
+                and basic SEO optimization. We also provide training on how to
+                manage your new website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">WebSolutions</h3>
+            <p class="footer-text">
+              Professional web development services for modern businesses.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-heading">Contact Info</h4>
+            <div class="contact-info">
+              <p>Email: info@websolutions.com</p>
+              <p>Phone: (555) 123-4567</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 WebSolutions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/form-validation.js"></script>
+  </body>
+</html>

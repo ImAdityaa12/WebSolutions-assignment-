@@ -1,0 +1,454 @@
+// =============================================================================
+// Base Styles
+// Reset, Typography, and Global Styles
+// =============================================================================
+
+// CSS Reset and Normalize
+// -----------------------------------------------------------------------------
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  color: $gray-900;
+  background-color: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Remove default button styles
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+// Remove default list styles
+ul,
+ol {
+  list-style: none;
+}
+
+// Remove default link styles
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Image defaults
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Form element defaults
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+// Remove default fieldset styles
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Remove default legend styles
+legend {
+  padding: 0;
+}
+
+// Table defaults
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Typography
+// -----------------------------------------------------------------------------
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  color: $gray-900;
+  margin-bottom: $spacing-4;
+}
+
+h1 {
+  @include heading-1;
+}
+
+h2 {
+  @include heading-2;
+}
+
+h3 {
+  @include heading-3;
+}
+
+h4 {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+
+  @include tablet-up {
+    font-size: $font-size-2xl;
+  }
+}
+
+h5 {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+
+  @include tablet-up {
+    font-size: $font-size-xl;
+  }
+}
+
+h6 {
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+
+  @include tablet-up {
+    font-size: $font-size-lg;
+  }
+}
+
+// Paragraphs
+p {
+  @include body-text;
+  margin-bottom: $spacing-4;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Large text
+.text-large {
+  @include body-large;
+}
+
+// Small text
+.text-small {
+  font-size: $font-size-sm;
+  color: $gray-500;
+}
+
+// Links
+a {
+  color: $primary-color;
+  transition: color $transition-base;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+
+  &:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+    border-radius: $border-radius-sm;
+  }
+}
+
+// Strong and emphasis
+strong,
+b {
+  font-weight: $font-weight-semibold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+// Code
+code {
+  font-family: $font-family-mono;
+  font-size: 0.875em;
+  background-color: $gray-100;
+  padding: $spacing-1 $spacing-2;
+  border-radius: $border-radius-sm;
+  color: $gray-800;
+}
+
+pre {
+  font-family: $font-family-mono;
+  background-color: $gray-900;
+  color: $gray-100;
+  padding: $spacing-4;
+  border-radius: $border-radius-md;
+  overflow-x: auto;
+  margin-bottom: $spacing-4;
+
+  code {
+    background: none;
+    padding: 0;
+    color: inherit;
+  }
+}
+
+// Blockquotes
+blockquote {
+  border-left: 4px solid $primary-color;
+  padding-left: $spacing-4;
+  margin: $spacing-6 0;
+  font-style: italic;
+  color: $gray-600;
+}
+
+// Horizontal rule
+hr {
+  border: none;
+  height: 1px;
+  background-color: $gray-200;
+  margin: $spacing-8 0;
+}
+
+// Selection
+::selection {
+  background-color: rgba($primary-color, 0.2);
+  color: $gray-900;
+}
+
+::-moz-selection {
+  background-color: rgba($primary-color, 0.2);
+  color: $gray-900;
+}
+
+// Focus styles for accessibility
+:focus-visible {
+  outline: 2px solid $primary-color;
+  outline-offset: 2px;
+}
+
+// Utility Classes
+// -----------------------------------------------------------------------------
+
+// Text alignment
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+// Text colors
+.text-primary {
+  color: $primary-color;
+}
+.text-secondary {
+  color: $secondary-color;
+}
+.text-success {
+  color: $success-color;
+}
+.text-error {
+  color: $error-color;
+}
+.text-gray {
+  color: $gray-600;
+}
+.text-muted {
+  color: $gray-500;
+}
+
+// Font weights
+.font-light {
+  font-weight: $font-weight-light;
+}
+.font-normal {
+  font-weight: $font-weight-normal;
+}
+.font-medium {
+  font-weight: $font-weight-medium;
+}
+.font-semibold {
+  font-weight: $font-weight-semibold;
+}
+.font-bold {
+  font-weight: $font-weight-bold;
+}
+
+// Display utilities
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.inline {
+  display: inline;
+}
+.flex {
+  display: flex;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.grid {
+  display: grid;
+}
+.hidden {
+  display: none;
+}
+
+// Visibility utilities
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+
+// Screen reader only
+.sr-only {
+  @include visually-hidden;
+}
+
+// Spacing utilities (margin and padding)
+@each $size,
+  $value
+    in (
+      0: $spacing-0,
+      1: $spacing-1,
+      2: $spacing-2,
+      3: $spacing-3,
+      4: $spacing-4,
+      5: $spacing-5,
+      6: $spacing-6,
+      8: $spacing-8,
+      10: $spacing-10,
+      12: $spacing-12,
+      16: $spacing-16,
+      20: $spacing-20,
+      24: $spacing-24,
+      32: $spacing-32
+    )
+{
+  // Margin utilities
+  .m-#{$size} {
+    margin: $value;
+  }
+  .mt-#{$size} {
+    margin-top: $value;
+  }
+  .mr-#{$size} {
+    margin-right: $value;
+  }
+  .mb-#{$size} {
+    margin-bottom: $value;
+  }
+  .ml-#{$size} {
+    margin-left: $value;
+  }
+  .mx-#{$size} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+  .my-#{$size} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  // Padding utilities
+  .p-#{$size} {
+    padding: $value;
+  }
+  .pt-#{$size} {
+    padding-top: $value;
+  }
+  .pr-#{$size} {
+    padding-right: $value;
+  }
+  .pb-#{$size} {
+    padding-bottom: $value;
+  }
+  .pl-#{$size} {
+    padding-left: $value;
+  }
+  .px-#{$size} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+  .py-#{$size} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+}
+
+// Auto margins
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+
+// Responsive utilities
+@include mobile-only {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+@include tablet-up {
+  .tablet-hidden {
+    display: none;
+  }
+  .mobile-only {
+    display: none;
+  }
+}
+
+@include desktop-up {
+  .desktop-hidden {
+    display: none;
+  }
+  .tablet-only {
+    display: none;
+  }
+}

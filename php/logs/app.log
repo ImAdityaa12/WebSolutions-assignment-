@@ -2,3 +2,5 @@
 # This file will contain form submissions and system events
 # Format: [TIMESTAMP] [LEVEL] [IP] MESSAGE | Context: {JSON_DATA}[2025-09-09 02:40:04] [INFO] [::1] Email sending skipped in development mode | Context: {"to":"your-email@gmail.com","subject":"New Contact Form Submission - Partnership","submission_id":null}
 [2025-09-09 02:40:04] [INFO] [::1] Contact form submitted successfully | Context: {"submission_id":"N\/A (DB disabled)","form_data":{"firstName":"fasdfsda","lastName":"sadfasdf","email":"adityagupta1291@gmail.com","phone":"1234567890","subject":"partnership","message":"testygh sadfsdfsda","newsletter":"Yes"},"ip":"::1"}
+[2025-09-09 02:56:46] [INFO] [::1] Email sending skipped in development mode | Context: {"to":"your-email@gmail.com","subject":"New Contact Form Submission - Other","submission_id":null}
+[2025-09-09 02:56:46] [INFO] [::1] Contact form submitted successfully | Context: {"submission_id":"N\/A (DB disabled)","form_data":{"firstName":"Aditya","lastName":"Gupta","email":"adityagupta1291@gmail.com","phone":"+919517111597","subject":"other","message":"sadfasdfsdfasd asdfasd","newsletter":"Yes"},"ip":"::1"}
